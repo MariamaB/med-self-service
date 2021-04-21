@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import {
   ITrustBuildCanvas,
   ITrustBuildCategory,
-} from '../../share/interfaces/interfaces';
-import { TrustBuildCanvasFactory } from '../../share/classes/trust-build-canvas-factory';
-import { QuestionnaireFactory } from '../../share/classes/questionnaire-factory';
+} from '../../../share/interfaces/interfaces';
+import { TrustBuildCanvasFactory } from '../../../share/classes/trust-build-canvas-factory';
+import { QuestionnaireFactory } from '../../../share/classes/questionnaire-factory';
 
 @Component({
   selector: 'app-tust-build-canvas-view',

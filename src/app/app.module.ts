@@ -1,4 +1,4 @@
-import { QuestionnaireComponent } from './components/questionnaire-view/questionnaire-view.component';
+import { QuestionnaireComponent } from './components/trust-build-Service/questionnaire-view/questionnaire-view.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
@@ -10,7 +10,7 @@ import { MaterialModule } from './material/material.module';
 import { AppRoutingModule } from './app-routing.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { TustBuildCanvasViewComponent } from './components/tust-build-canvas-view/tust-build-canvas-view.component';
+import { TustBuildCanvasViewComponent } from './components/trust-build-Service/tust-build-canvas-view/tust-build-canvas-view.component';
 import { DigaCanvasComponent } from './components/fast-track-checker/diga-canvas/diga-canvas.component';
 import {
   MedicalIntendedUseComponent,
