@@ -65,8 +65,9 @@
     border: 2px seagreen ridge;
     margin: 0.5%;
   }
+  // background-color: aqua;
 
-  width: 60%;
+  width: 80%;
   height: 60%;
 }
 
@@ -98,7 +99,7 @@
 }
 
 #left {
-  flex: 2;
+  flex: auto;
   > div {
     margin: 1%;
   }
@@ -108,7 +109,7 @@
 }
 
 #right {
-  flex: 2;
+  flex: auto;
 }
 
 .canvas-grid-list {

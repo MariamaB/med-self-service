@@ -20,10 +20,6 @@ mat-drawer {
 
 #main-content {
   /* padding: 5%; */
-  background-color: aqua;
-  width: 100%;
-  display: flex;
-  flex: 1;
-  justify-content: flex-start;
   /* height: 100%; */
+  padding: 0.2%;
 }
