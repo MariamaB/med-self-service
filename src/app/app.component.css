@@ -15,9 +15,15 @@
 }
 
 mat-drawer {
-  width: 18%;
+  width: 12%;
 }
 
 #main-content {
-  padding: 1%;
+  /* padding: 5%; */
+  background-color: aqua;
+  width: 100%;
+  display: flex;
+  flex: 1;
+  justify-content: flex-start;
+  /* height: 100%; */
 }
