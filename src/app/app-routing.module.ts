@@ -5,6 +5,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { QuestionnaireComponent } from './components/trust-build-Service/questionnaire-view/questionnaire-view.component';
 import { TustBuildCanvasViewComponent } from './components/trust-build-Service/tust-build-canvas-view/tust-build-canvas-view.component';
 import { DigaCanvasComponent } from './components/fast-track-checker/diga-canvas/diga-canvas.component';
+import { DigasOverviewComponent } from './components/fast-track-checker/digas-overview/digas-overview.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path: 'diga-canvas',
     component: DigaCanvasComponent,
+  },
+  {
+    path: 'digas-overview',
+    component: DigasOverviewComponent,
   },
   { path: '**', component: PageNotFoundComponent },
   // { path: 'hero/:id', component: HeroDetailComponent },
