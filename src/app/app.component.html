@@ -1,10 +1,11 @@
 <div style="height: 100%;">
-  <mat-toolbar color="primary">
+  <mat-toolbar style="background-color: #1a191b; color: rgb(234, 237, 240);">
     <mat-toolbar-row>
       <button mat-icon-button (click)="sidenav.toggle()" fxShow="true">
         <mat-icon>menu</mat-icon>
       </button>
-      <span class="center-headline">{{headline}}</span>
+      <span class="center-headline"><a style="text-decoration: none; color: aliceblue;"
+          routerLink="home">{{headline}}</a></span>
       <mat-menu #settings>
         <button mat-menu-item>Settings</button>
         <button mat-menu-item>Help</button>
@@ -19,7 +20,7 @@
   <mat-drawer-container fxFlexFill>
     <mat-drawer mode="side" #sidenav>
       <mat-nav-list>
-        <a routerLink="home" routerLinkActive="active" mat-list-item>
+        <a routerLink="home" (click)="sidenav.toggle()" routerLinkActive="active" mat-list-item>
           <i class="material-icons-two-tone icon-space">home</i>
           Start
         </a>
@@ -41,10 +42,12 @@
           </mat-nav-list>
         </div> -->
 
-        <a routerLink="questionnaire" routerLinkActive="active" mat-list-item>
+        <a routerLink="questionnaire" (click)="sidenav.toggle()" routerLinkActive="active" mat-list-item>
           <i class="material-icons-two-tone icon-space">star</i>
           Trust-Build-Canvas Self-Service</a>
-
+        <a routerLink="digas-overview" (click)="sidenav.toggle()" routerLinkActive="active" mat-list-item>
+          <i class="material-icons-two-tone icon-space">star</i>
+          Fast-Track-Check Self-Service</a>
       </mat-nav-list>
     </mat-drawer>
     <mat-drawer-content id="main-content" fxFlexFill>

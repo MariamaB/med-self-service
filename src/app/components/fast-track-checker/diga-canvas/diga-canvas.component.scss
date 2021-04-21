@@ -61,7 +61,8 @@
   display: grid;
   grid-template-rows: auto auto auto;
   mat-card {
-    border: 2px rgb(70, 70, 153) ridge;
+    // border: 2px rgb(70, 70, 153) ridge;
+    border: 2px seagreen ridge;
     margin: 0.5%;
   }
 
@@ -90,7 +91,9 @@
   p {
     font-size: xx-small;
   }
-  border: 2px rgb(70, 70, 153) ridge;
+  // border: 2px rgb(70, 70, 153) ridge;
+
+  border: 2px seagreen ridge;
   background-color: white;
 }
 

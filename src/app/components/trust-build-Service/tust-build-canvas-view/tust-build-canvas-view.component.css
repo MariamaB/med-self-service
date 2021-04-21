@@ -17,14 +17,14 @@
   margin-bottom: 1%;
   height: fit-content;
 
-  border: 2px rgb(70, 70, 153) ridge;
+  border: 3px rgb(70, 70, 153) ridge;
 }
 
 #middle {
   align-self: flex-start;
   flex: 2;
   height: fit-content;
-  border: 2px rgb(70, 70, 153) ridge;
+  border: 3px rgb(70, 70, 153) ridge;
 }
 mat-card-content div {
   margin-bottom: 3%;

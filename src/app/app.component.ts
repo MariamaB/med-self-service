@@ -10,7 +10,7 @@ import { jsPDF } from 'jspdf';
 })
 export class AppComponent {
   @ViewChild('content') content: ElementRef;
-  title = 'Frontend';
+  title = 'Medical Self-Services';
   projects = true;
   innovation = true;
   pool = true;

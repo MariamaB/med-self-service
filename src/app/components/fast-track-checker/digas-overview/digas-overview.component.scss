@@ -1,17 +1,25 @@
 mat-grid-tile {
-  //   background: lightblue;
+  //   background: rgba(65, 100, 68, 0.397);
   mat-card {
     height: 50%;
+    width: 50%;
   }
 }
 
-mat-card {
-  heigth: 100%;
+.container {
+  padding: 2%;
+  height: 100%;
+  background: rgba(65, 100, 68, 0.397);
 }
 
 // border-radius: 3%; background-color: rgb(102, 184, 102);
 
 .example-header-image {
-  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-image: url('../../../../assets/migr2.png');
   background-size: cover;
+}
+.diga-card {
+  //   background: rgba(65, 100, 68, 0.397);
+  //   height: 100%;
+  //   border: 2px seagreen ridge;
 }
