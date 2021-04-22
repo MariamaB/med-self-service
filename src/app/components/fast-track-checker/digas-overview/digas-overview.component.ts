@@ -15,7 +15,7 @@ export class DigasOverviewComponent implements OnInit {
   ngOnInit() {
     this.digaData$ = this.firestore.collection('data').valueChanges();
     this.digaData$.subscribe((data) => {
-      console.log('firestore data', JSON.stringify(data, null, 2));
+      // console.log('firestore data', JSON.stringify(data, null, 2));
       this.digas = data;
     });
   }

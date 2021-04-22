@@ -2,14 +2,15 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Validators, FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { canvas } from './canvas';
+import { canvas, digaEmpty, digaMockdata } from './canvas';
+import { v4 as uuidv4 } from 'uuid';
 @Component({
   selector: 'app-diga-canvas',
   templateUrl: './diga-canvas.component.html',
   styleUrls: ['./diga-canvas.component.scss'],
 })
 export class DigaCanvasComponent implements OnInit, OnDestroy {
-  formControl = new FormControl('', [
+  lengthFormControl = new FormControl('', [
     Validators.required,
     Validators.minLength(1),
   ]);
@@ -22,24 +23,41 @@ export class DigaCanvasComponent implements OnInit, OnDestroy {
     Validators.minLength(1),
   ]);
   canvas = canvas;
-
-  onEdit = false;
+  onUpdate = false;
+  onEdit = true;
   diga: any;
 
   digaData$: Observable<any[]>;
   constructor(private firestore: AngularFirestore) {}
   ngOnInit() {
-    this.digaData$ = this.firestore.collection('data').valueChanges();
-    this.digaData$.subscribe((x) => {
-      console.log('firestore data', JSON.stringify(x, null, 2));
-      this.diga = x[0];
-    });
+    if (history.state.data) {
+      this.diga = history.state.data;
+      this.onUpdate = true;
+    } else {
+      this.diga = digaEmpty;
+      this.onUpdate = false;
+    }
+    history.state.data = {};
   }
   ngOnDestroy(): void {
-    console.log('My diga', JSON.stringify(this.diga, null, 2));
+    // console.log('My diga', JSON.stringify(this.diga, null, 2));
   }
   public onSave() {
-    // firestore.collection('data').add(this.diga);
+    if (this.onEdit) {
+      this.onEdit = false;
+      if (!this.onUpdate) {
+        this.onUpdate = true;
+        this.diga.id = uuidv4();
+        console.log('create canvas id:', this.diga.id);
+        this.firestore.collection('data').doc(this.diga.id).set(this.diga);
+      } else {
+        this.onUpdate = false;
+        this.firestore.collection('data').doc(this.diga.id).update(this.diga);
+      }
+    } else {
+      this.onEdit = true;
+    }
+    // this.onEdit = !this.onEdit;
   }
   public add(): void {
     console.log('new Language');

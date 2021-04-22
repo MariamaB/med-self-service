@@ -14,8 +14,12 @@ mat-grid-tile {
 
 // border-radius: 3%; background-color: rgb(102, 184, 102);
 
-.example-header-image {
+.example-header-image-0 {
   background-image: url('../../../../assets/migr2.png');
+  background-size: cover;
+}
+.example-header-image-1 {
+  background-image: url('../../../../assets/adipo.png');
   background-size: cover;
 }
 .diga-card {
